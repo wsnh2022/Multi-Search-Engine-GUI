@@ -1,6 +1,7 @@
 #SingleInstance Force
 
 ; reference https://coolors.co/c1c1c1-2c4251-d16666 
+; https://imgur.com/a/7Rou6Ph
 
 ;; FONT STYLE
 MyFont:="Consolas"
