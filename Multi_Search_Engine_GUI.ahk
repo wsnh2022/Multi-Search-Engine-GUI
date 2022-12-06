@@ -7,10 +7,10 @@
 MyFont:="Consolas"
 
 ;; THEME COLOR
-bc:="c" . "001a00", Hfc:="c" . "04d404", Fc:= "c" . "d6f5d5"          ;Green Theme
-;~ bc:="c" . "050500", Hfc:="c" . "ffff00", Fc:= "c" . "ffff9e"            ;Yellow Theme
+;~ bc:="c" . "001a00", Hfc:="c" . "04d404", Fc:= "c" . "d6f5d5"          ;Green Theme
+;~ bc:="c" . "050500", Hfc:="c" . "ffff00", Fc:= "c" . "ffff9e"         ;Yellow Theme
 ;~ bc:="c" . "000000", Hfc:="c" . "d10000", Fc:= "c" . "c96f6f"         ;Red Theme
-;~ bc:="c" . "0f0006", Hfc:="c" . "fa056b", Fc:= "c" . "9375ff"         ;Blue-Red Theme
+bc:="c" . "0f0006", Hfc:="c" . "fa056b", Fc:= "c" . "9375ff"         ;Blue-Red Theme
 ;~ bc:="c" . "2C4251", Hfc:="c" . "D16666", Fc:= "c" . "C1C1C1"        ;theme1
 ;~ bc:="c" . "393d3f", Hfc:="c" . "c6c5b9", Fc:= "c" . "fdfdff"           ; Pale white theme
 ;~ bc:="c" . "031927", Hfc:="c" . "ba1200", Fc:= "c" . "9DD1F1"         ; Pale white theme
