@@ -1,14 +1,13 @@
 #SingleInstance Force
 
-; reference https://coolors.co/c1c1c1-2c4251-d16666 
-; https://imgur.com/a/7Rou6Ph
+; reference https://coolors.co/c1c1c1-2c4251-d16666
 
 ;; FONT STYLE
 MyFont:="Consolas"
 
 ;; THEME COLOR
 ;~ bc:="c" . "001a00", Hfc:="c" . "04d404", Fc:= "c" . "d6f5d5"          ;Green Theme
-;~ bc:="c" . "050500", Hfc:="c" . "ffff00", Fc:= "c" . "ffff9e"         ;Yellow Theme
+;~ bc:="c" . "050500", Hfc:="c" . "ffff00", Fc:= "c" . "ffff9e"            ;Yellow Theme
 ;~ bc:="c" . "000000", Hfc:="c" . "d10000", Fc:= "c" . "c96f6f"         ;Red Theme
 bc:="c" . "0f0006", Hfc:="c" . "fa056b", Fc:= "c" . "9375ff"         ;Blue-Red Theme
 ;~ bc:="c" . "2C4251", Hfc:="c" . "D16666", Fc:= "c" . "C1C1C1"        ;theme1
@@ -45,9 +44,9 @@ Gui Add,CheckBox, x140 y+2 %Fc% vC15,r/AutomateYourself(2.9k)
 Gui Font,s12
 Gui Add,Text, x5 y180 %Hfc%, Social Media
 Gui, Font, s10 %MyFont%
-Gui Add,CheckBox, x9 y200 %Fc% vC16,Instagram
-Gui Add,CheckBox, x9 y+2 %Fc% vC17,Twitter
-Gui Add,CheckBox, x9 y+2 %Fc% vC18,LinkedIn
+Gui Add,CheckBox, x9 y200 %Fc% vC16, Instagram
+Gui Add,CheckBox, x9 y+2 %Fc% vC17, Twitter
+Gui Add,CheckBox, x9 y+2 %Fc% vC18, LinkedIn
 
 
 Gui, Font, s10 %MyFont%
@@ -62,7 +61,7 @@ Return
 
 ^Numpad1::												;Hotkey
   GuiControl Focus,Edit1  			;Focus on Edit box
-  Gui, Color, %bc% 
+  Gui, Color, %bc%
   Gui Show, w550 h350				;Show Gui
 Return
 
@@ -77,13 +76,13 @@ Run, "C:\Users\%A_UserName%\OneDrive\Documents\MyAHK_CheckBox_LIst.xlsx"
 return
 
 Edit1:
-Run edit "%A_ScriptFullPath%"
+Run edit "%A_MyDocuments%\AutoHotkey\Daily_Ahk\AllinOneGui.ahk"
 return
 
 Search:
-  Gui Submit                      ;Get the values of all controls
-  If (A_GuiControl="Search"){       ;If 'Okay' was clicked
-    If C1                         ;Run site based on which checkboxes were set
+  Gui Submit                                   ; Get the values of all controls
+  If (A_GuiControl="Search"){       ; If 'Okay' was clicked
+    If C1                                           ; Run site based on which checkboxes were set
       Run https://duckduckgo.com/?q=%Ed%
     If C2
       Run https://www.google.com/search?q=%Ed%
@@ -114,9 +113,13 @@ Search:
     if C15
       Run https://www.reddit.com/r/AutomateYourself/search/?q=%Ed%&restrict_sr=1&sr_nsfw=
     if C16
-      Run https://www.instagram.com/%Ed%/ 
+      Run https://www.instagram.com/%Ed%/
+    if C17
+      Run https://twitter.com/search?q=%Ed%
+  if C18
+      Run https://www.linkedin.com/search/results/all/?keywords=%Ed%
   }
-Loop 16                                        ; Loop through all checkboxes
+Loop 18                                        ; Loop through all checkboxes
 GuiControl ,,C%A_Index%,0       ; and clear them
 GuiControl ,,Edit1                      ;  Edit box too
 Return
