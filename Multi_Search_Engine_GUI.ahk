@@ -77,7 +77,7 @@ Run, "C:\Users\%A_UserName%\OneDrive\Documents\MyAHK_CheckBox_LIst.xlsx"
 return
 
 Edit1:
-Run edit "%A_ScriptFUllPath%"
+Run edit "%A_ScriptFullPath%"
 return
 
 Search:
