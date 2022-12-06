@@ -77,7 +77,7 @@ Run, "C:\Users\%A_UserName%\OneDrive\Documents\MyAHK_CheckBox_LIst.xlsx"
 return
 
 Edit1:
-Run edit "%A_MyDesktop%\Multi_Search_Engine_GUI.ahk"
+Run edit "%A_ScriptDir%\Multi_Search_Engine_GUI.ahk"
 return
 
 Search:
